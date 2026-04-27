@@ -2,5 +2,48 @@
   "extends": "./tsconfig.base.json",
   "compileOnSave": false,
   "files": [],
-  "references": []
+  "references": [
+    {
+      "path": "./apps/api-web-e2e"
+    },
+    {
+      "path": "./apps/api-web"
+    },
+    {
+      "path": "./apps/api-worker-e2e"
+    },
+    {
+      "path": "./apps/api-worker"
+    },
+    {
+      "path": "./apps/api-cron-e2e"
+    },
+    {
+      "path": "./apps/api-cron"
+    },
+    {
+      "path": "./apps/spa-e2e"
+    },
+    {
+      "path": "./apps/spa"
+    },
+    {
+      "path": "./libs/database"
+    },
+    {
+      "path": "./libs/contracts"
+    },
+    {
+      "path": "./libs/message-broker"
+    },
+    {
+      "path": "./libs/e2e-utils"
+    },
+    {
+      "path": "./apps/api-inventory-e2e"
+    },
+    {
+      "path": "./apps/api-inventory"
+    }
+  ]
 }
