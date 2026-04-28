@@ -3,6 +3,13 @@
   "compilerOptions": {
     "outDir": "dist",
     "tsBuildInfoFile": "dist/tsconfig.app.tsbuildinfo",
+    "paths": {
+      "@/*": ["./src/*"],
+      "@erp/database": ["../../libs/database/src/index.ts"],
+      "@erp/database/*": ["../../libs/database/src/*"],
+      "@erp/contracts": ["../../libs/contracts/src/index.ts"],
+      "@erp/contracts/*": ["../../libs/contracts/src/*"]
+    },
     "jsx": "react-jsx",
     "lib": ["dom"],
     "types": [
@@ -11,7 +18,7 @@
       "@nx/react/typings/image.d.ts",
       "vite/client"
     ],
-    "rootDir": "src",
+    "rootDir": "../../",
     "module": "esnext",
     "moduleResolution": "bundler"
   },
@@ -34,5 +41,10 @@
     "eslint.config.cjs",
     "eslint.config.mjs"
   ],
-  "include": ["src/**/*.js", "src/**/*.jsx", "src/**/*.ts", "src/**/*.tsx"]
+  "include": ["src/**/*.js", "src/**/*.jsx", "src/**/*.ts", "src/**/*.tsx"],
+  "references": [
+    {
+      "path": "../../libs/contracts/tsconfig.lib.json"
+    }
+  ]
 }

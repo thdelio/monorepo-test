@@ -13,14 +13,14 @@ describe('App', () => {
     expect(baseElement).toBeTruthy();
   });
 
-  it('should have a greeting as the title', () => {
+  it('should show inventory title', () => {
     const { getAllByText } = render(
       <BrowserRouter>
         <App />
       </BrowserRouter>,
     );
     expect(
-      getAllByText(new RegExp('Welcome spa', 'gi')).length > 0,
+      getAllByText(new RegExp('Inventario', 'gi')).length > 0,
     ).toBeTruthy();
   });
 });

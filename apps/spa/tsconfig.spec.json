@@ -2,6 +2,14 @@
   "extends": "../../tsconfig.base.json",
   "compilerOptions": {
     "outDir": "./out-tsc/vitest",
+    "rootDir": "../../",
+    "paths": {
+      "@/*": ["./src/*"],
+      "@erp/database": ["../../libs/database/src/index.ts"],
+      "@erp/database/*": ["../../libs/database/src/*"],
+      "@erp/contracts": ["../../libs/contracts/src/index.ts"],
+      "@erp/contracts/*": ["../../libs/contracts/src/*"]
+    },
     "types": [
       "vitest/globals",
       "vitest/importMeta",
