@@ -19,6 +19,12 @@
             "args": [
               "--node-env=development"
             ]
+          },
+          "watch": {
+            "args": [
+              "--node-env=development",
+              "--watch"
+            ]
           }
         }
       },
@@ -84,6 +90,7 @@
     }
   },
   "dependencies": {
+    "@erp/contracts": "workspace:*",
     "@scalar/nestjs-api-reference": "^1.1.9",
     "@nestjs/common": "^11.0.0",
     "@nestjs/core": "^11.0.0",

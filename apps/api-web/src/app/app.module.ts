@@ -1,9 +1,11 @@
 import { Module } from '@nestjs/common';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
 import { MikroOrmModule } from '@mikro-orm/nestjs';
 import mikroOrmConfig from './mikro-orm.config';
 import { LoggerModule } from 'nestjs-pino';
+import { HealthController } from './modules/health/controllers/health.controller';
+import { InventoryController } from './modules/inventory/controllers/inventory.controller';
+import { HealthService } from './modules/health/services/health.service';
+import { InventoryService } from './modules/inventory/services/inventory.service';
 
 @Module({
   imports: [
@@ -18,7 +20,7 @@ import { LoggerModule } from 'nestjs-pino';
       },
     }),
   ],
-  controllers: [AppController],
-  providers: [AppService],
+  controllers: [HealthController, InventoryController],
+  providers: [HealthService, InventoryService],
 })
 export class AppModule {}

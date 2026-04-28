@@ -20,10 +20,10 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   const globalPrefix = 'api';
   const port = process.env.PORT || 3000;
-  const document = SwaggerModule.createDocument(app, config);
 
   app.setGlobalPrefix(globalPrefix);
   app.useGlobalPipes(new ZodValidationPipe());
+  const document = SwaggerModule.createDocument(app, config);
 
   app.use('/api-docs', apiReference({ content: document }));
 

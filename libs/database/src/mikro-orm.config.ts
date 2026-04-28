@@ -10,10 +10,12 @@ const config: Options = defineConfig({
   password: process.env.DB_PASS ?? 'erp',
   entities: [
     './dist/apps/api-web/src/app/modules/**/entities/*.entity.js',
+    './dist/apps/api-inventory/src/app/modules/**/entities/*.entity.js',
     './dist/libs/database/src/entities/*.entity.js',
   ],
   entitiesTs: [
     './apps/api-web/src/app/modules/**/entities/*.entity.ts',
+    './apps/api-inventory/src/app/modules/**/entities/*.entity.ts',
     './libs/database/src/entities/*.entity.ts',
   ],
   extensions: [Migrator, SeedManager],
