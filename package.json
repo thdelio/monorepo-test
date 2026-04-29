@@ -9,7 +9,7 @@
     "dev:api": "nx serve apps/api-web",
     "dev:worker": "nx serve apps/api-worker",
     "dev:spa": "nx serve spa",
-    "dev": "nx run-many --target=serve --projects=apps/api-web,apps/api-inventory,spa --parallel",
+    "dev": "nx run-many --target=serve --projects=apps/api-web,apps/api-inventory,apps/api-cron,spa --parallel",
     "test": "nx run-many --target=test --all",
     "test:e2e": "playwright test",
     "db:migrate": "mikro-orm migration:up",
